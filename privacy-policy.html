@@ -1,1 +1,112 @@
-使用本地定稿 privacy-policy.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 — 愈动 YodoFit</title>
+<style>
+  body { font-family: -apple-system, "HarmonyOS Sans", sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; color: #333; line-height: 1.8; font-size: 15px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 17px; margin-top: 28px; color: #1aad19; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  .meta { color: #999; font-size: 13px; margin-bottom: 24px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f5; }
+  strong { color: #1aad19; }
+</style>
+</head>
+<body>
+
+<h1>隐私政策</h1>
+<p class="meta">生效日期：2026 年 8 月 6 日 &nbsp;|&nbsp; 版本 V1.0.0 &nbsp;|&nbsp; 愈动 YodoFit</p>
+
+<p>愈动 YodoFit（包名：<code>com.yodofit.app</code>，以下简称"本应用"）由个人开发者 <strong>华俊贤</strong> 运营（以下简称"我们"）。我们深知个人信息对您的重要性，本政策旨在向您说明我们如何处理您的个人信息，以及您享有的权利。本政策已按《中华人民共和国个人信息保护法》第十七条载明法定必含事项。</p>
+
+<h2>1. 我们收集和处理的信息</h2>
+<p>当前版本提供华为账号快速登录、本地训练计划、动作浏览、训练计时、训练记录、本地统计与推荐、天气展示、云端 AI 训练分析（需单独授权）与"愈动 Pro"订阅功能。为实现这些功能，我们可能处理以下信息：</p>
+<table>
+<tr><th>数据类型</th><th>用途</th><th>是否上传云端</th></tr>
+<tr><td>华为账号 OpenID</td><td>在您主动选择华为账号登录后，建立本应用内唯一的登录关联</td><td>否，仅存本机；当前不用于云同步</td></tr>
+<tr><td>训练记录（动作、时长、组数、日期）</td><td>生成训练记录、本地统计、自适应推荐、身体图谱、愈动树进度</td><td>否，仅存本机</td></tr>
+<tr><td>主题、计划与动作选择</td><td>保存您的个性化设置</td><td>否，仅存本机</td></tr>
+<tr><td>天气位置（城市坐标，约 1km 精度）</td><td>查询当前城市天气，辅助户外运动参考</td><td>仅发送至和风天气 API 查询，不保存轨迹</td></tr>
+<tr><td>精确位置（仅户外跑步时）</td><td>户外跑步页获取当前位置用于跑步记录；单次定位，不后台持续定位</td><td>否，仅本机使用</td></tr>
+<tr><td>健康数据（心率、步数、卡路里，需单独授权）</td><td>训练中心率展示、日常活动量统计</td><td>否，仅通过华为健康服务在本机读取</td></tr>
+<tr><td>AI 分析输入（动作名称、组次、时长、强度等训练参数，以及心率、睡眠等健康指标摘要，需单独授权）</td><td>训练解释、问答与个性化总结（仅用于训练分析与总结）</td><td>仅在获得 AI 授权后发送至愈动 AI 服务分析，不发送个人身份信息；AI 回复在服务器临时缓存最长 24 小时，不用于训练模型</td></tr>
+<tr><td>订阅结果与订阅 ID（购买愈动 Pro 时）</td><td>经华为 IAP 与服务器验签后激活、恢复会员权益</td><td>仅订阅状态信息；支付由华为 IAP 完成，我们不接触您的支付账户信息</td></tr>
+</table>
+
+<p><strong>我们不收集</strong>：华为账号昵称、头像、手机号、邮箱、通讯录、短信、通话记录、设备广告标识、摄像头画面或精确位置轨迹。应用设备状态检测只在真机生成一次性、有效期约一小时的加密 DeviceToken，用于判断本应用在该设备上的首次使用状态；该令牌不写入本机、不用于定位或广告画像，服务端仅保留首次使用/已使用结果。若您选择本地体验模式，我们不读取华为账号 OpenID。</p>
+
+<h2>2. 处理目的与方式</h2>
+<p>上述信息仅用于在本机提供训练计划、训练记录、本地统计与推荐功能，以及您主动使用的天气、AI 分析和会员服务。数据默认保存在设备私有存储中，除本政策明确说明的情形（天气查询、授权后的 AI 分析、订阅验签）外，<strong>不上传服务器、不用于广告画像、不向第三方出售</strong>。</p>
+
+<h2>3. 权限说明</h2>
+<table>
+<tr><th>系统权限</th><th>用途</th><th>是否强制</th></tr>
+<tr><td>INTERNET（网络）</td><td>查询天气、调用云端 AI（需 AI 授权）、订阅验签；未联网时本地功能不受影响</td><td>否</td></tr>
+<tr><td>APPROXIMATELY_LOCATION（近似位置）</td><td>获取当前城市用于天气查询</td><td>否，拒绝后天气显示"未接入"</td></tr>
+<tr><td>LOCATION（精确位置）</td><td>仅户外跑步页单次获取当前位置；不后台持续定位、不记录轨迹</td><td>否，拒绝后户外跑步使用无位置模式</td></tr>
+<tr><td>VIBRATE（振动）</td><td>组间结束、动作切换和训练完成提示</td><td>否，可在设置中关闭</td></tr>
+<tr><td>PUBLISH_AGENT_REMINDER（系统提醒）</td><td>休息倒计时与训练完成提醒在退后台或锁屏时由系统准时弹出</td><td>否，可在设置中关闭提醒</td></tr>
+</table>
+
+<p>摄像头权限当前版本<strong>不申请</strong>；摄像头、健康数据属于未来能力预留，启用时将重新提供用途说明并取得独立同意。华为健康服务（手表心率等）通过 Health Kit 独立授权，不通过系统权限声明。</p>
+
+<h2>4. 三类独立同意</h2>
+<p>以下敏感能力分别设有独立的同意开关，您可在 App 内「我的 → 隐私与敏感信息授权」中随时查看、开启或撤回：</p>
+<ul>
+  <li><strong>健康与生理数据</strong> — 通过华为健康服务读取手表心率、步数、能耗；</li>
+  <li><strong>AI 智能教练</strong> — 优先使用本地规则引擎推理；深度分析时调用云端大模型，仅发送训练参数与健康指标摘要，不发送个人身份信息；撤回后 AI 建议不可用，训练流程不受影响；</li>
+  <li><strong>精确位置数据</strong> — 仅用于获取城市天气与户外跑步定位，不记录轨迹。</li>
+</ul>
+<p>撤回同意不影响撤回前基于同意已进行的处理活动。</p>
+
+<h2>5. 保存期限与删除</h2>
+<ul>
+  <li><strong>本地训练记录、自定义计划与个性化设置</strong>：保存至您删除、卸载应用或清除应用数据为止；</li>
+  <li><strong>华为账号登录态与 OpenID</strong>：保存至您退出登录、卸载应用或清除应用数据；</li>
+  <li><strong>订阅状态缓存</strong>：保存至订阅到期且被新状态覆盖，或您清除应用数据。</li>
+</ul>
+<p>删除路径：「设置 → 账号与数据 → 删除本机训练数据」一键清空；「账号与登录 → 退出登录」清除本机登录态与 OpenID。</p>
+
+<h2>6. 对外提供、委托处理与跨境传输</h2>
+<ul>
+  <li><strong>华为账号服务 (Account Kit)</strong>：仅在您主动登录时由系统完成身份验证并返回 OpenID；我们不保存授权码、ID Token 或 UnionID，也不获取昵称、头像、手机号和邮箱。详见 <a href="https://consumer.huawei.com/cn/privacy/privacy-policy/" target="_blank">华为隐私声明</a>。</li>
+  <li><strong>和风天气 API</strong>：发送城市坐标查询天气，不传输个人信息。详见 <a href="https://dev.qweather.com/terms/privacy" target="_blank">和风天气隐私政策</a>。</li>
+  <li><strong>华为健康服务 (Health Kit)</strong>：数据仅在设备本地读取，不上传我们的服务器。详见 <a href="https://developer.huawei.com/consumer/cn/doc/Health-Guides/privacy-policy" target="_blank">华为隐私声明</a>。</li>
+  <li><strong>华为设备安全服务 (DeviceVerify)</strong>：一次性、短时效加密 DeviceToken 用于判断本应用在该设备上的首次使用状态；令牌不保存、不写日志。</li>
+  <li><strong>华为 IAP（应用内支付）</strong>：订阅付款由华为处理，我们不接触您的银行卡或支付账户信息。</li>
+  <li><strong>DeepSeek（云端大模型）</strong>：仅在您授权 AI 智能教练后，由愈动服务器转发训练参数与健康指标摘要用于分析与总结，不含个人身份信息。详见 <a href="https://platform.deepseek.com/privacy" target="_blank">DeepSeek 隐私政策</a>。</li>
+</ul>
+<p>除上述情形外，我们<strong>不向第三方共享、转让或公开披露</strong>您的个人信息。当前版本的数据处理均在中国境内完成，不涉及跨境传输；若未来涉及，将依法另行告知并取得单独同意。</p>
+
+<h2>7. 您的权利</h2>
+<ul>
+  <li><strong>查阅与复制</strong>：应用内可见的本地训练记录、计划与设置均可随时查阅；</li>
+  <li><strong>更正与补充</strong>：您可随时修改计划、主题等本机设置；</li>
+  <li><strong>删除</strong>：按第 5 条路径删除本机数据；</li>
+  <li><strong>撤回同意</strong>：随时关闭独立同意开关；</li>
+  <li><strong>注销/退出</strong>：退出华为账号登录即清除本机账号关联；</li>
+  <li><strong>投诉渠道</strong>：您可通过第 11 条联系方式与我们联系；若对答复不满意，您有权向履行个人信息保护职责的部门投诉、举报。</li>
+</ul>
+<p>我们承诺在收到您的请求并核实身份后，于法律规定的期限内（一般不超过 15 个工作日）予以处理并答复。</p>
+
+<h2>8. 未成年人保护</h2>
+<p>本应用以成年用户为主要服务对象。我们建议未成年人在监护人陪同下使用本应用；高强度训练动作未成年人请勿单独尝试。我们不会故意收集不满十四周岁未成年人的个人信息；若监护人发现不满十四周岁的未成年人未经同意向本应用提供了个人信息，请通过第 11 条联系方式联系我们，我们将及时删除。</p>
+
+<h2>9. 政策更新</h2>
+<p>我们可能不定期更新本政策。重大变化（如处理目的、处理方式、信息种类变化）将在 App 内以弹窗或显著方式重新征得您的同意。继续使用即视为同意更新后的政策。</p>
+
+<h2>10. 争议解决</h2>
+<p>本政策适用中华人民共和国法律。因本政策产生的争议，双方应友好协商解决；协商不成的，提交开发者所在地有管辖权的人民法院审理。</p>
+
+<h2>11. 联系方式</h2>
+<p>发布主体：华俊贤（个人开发者）</p>
+<ul>
+  <li>隐私联系邮箱：<strong>yodofit@outlook.com</strong></li>
+  <li>客服电话：<strong>15196293719</strong></li>
+</ul>
+
+</body>
+</html>
